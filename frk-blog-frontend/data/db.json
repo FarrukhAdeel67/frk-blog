@@ -1,0 +1,15 @@
+{
+    "blogs": [{
+            "title": "Sokano ",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, unde minus in omnis qui delectus expedita, porro, dolorem voluptatum natus assumenda quam consequatur enim reiciendis aliquam nam iure non et?",
+            "author": "Major Farrukh",
+            "id": 1
+        },
+        {
+            "title": "Hashtnagri",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, unde minus in omnis qui delectus expedita, porro, dolorem voluptatum natus assumenda quam consequatur enim reiciendis aliquam nam iure non et?",
+            "author": "Adeel Raziq",
+            "id": 2
+        }
+    ]
+}
