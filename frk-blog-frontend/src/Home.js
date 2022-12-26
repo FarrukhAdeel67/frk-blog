@@ -4,7 +4,7 @@ import BlogList from './BlogList';
 const Home = () => {
     const [blogs, setBlogs] = useState(null)  
     useEffect(()=>{
-        fetch('http://localhost:8000/blogs')
+        fetch('http://localhost:4000/api/blogs')
         .then((res)=>{
             return res.json();
         })
