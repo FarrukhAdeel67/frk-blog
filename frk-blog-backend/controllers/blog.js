@@ -48,5 +48,24 @@ module.exports = {
                 .status(err.status || 500)
                 .message(err.message || "Something Went Wrong!");
         }
+    },
+    deleteBlog: async(req, res) => {
+        try {
+            const { id } = req.params;
+            if (!id) {
+                throw { status: 409, message: "Required Fields cannot be empty" };
+            }
+            const blog = await Blogs.destroy({
+                where: {
+                    id,
+                }
+            })
+            res.status(200).send("blog deleted")
+        } catch (err) {
+            console.log(err);
+            res
+                .status(err.status || 500)
+                .message(err.message || "Something Went Wrong!");
+        }
     }
 }
