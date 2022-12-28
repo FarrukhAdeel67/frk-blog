@@ -29,5 +29,24 @@ module.exports = {
                 .status(err.status || 500)
                 .message(err.message || "Something Went Wrong!");
         }
+    },
+    getBlog: async(req, res) => {
+        try {
+            const { id } = req.params;
+            if (!id) {
+                throw { status: 409, message: "Required Fields cannot be empty" };
+            }
+            const blog = await Blogs.findOne({
+                where: {
+                    id,
+                }
+            })
+            res.status(200).send(blog)
+        } catch (err) {
+            console.log(err);
+            res
+                .status(err.status || 500)
+                .message(err.message || "Something Went Wrong!");
+        }
     }
 }
